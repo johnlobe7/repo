@@ -40,7 +40,6 @@
 
     <link rel="stylesheet" type="text/css" href="css/index.css" />
     <title>Hello World</title>
-<<<<<<< HEAD
     <!--코드 추가-->
     <script type="text/javascript" charset="utf-8">
     var pictureSource;  
@@ -82,8 +81,6 @@
     }
     </script>
     <!--여기까지-->
-=======
->>>>>>> parent of be2359d... addcamera
 </head>
 
 <body>
@@ -106,46 +103,9 @@
         </table>
         <input type="submit" value="LogIn" />
     </form>
-    <!--코드 추가-->
-    <script type="text/javascript" charset="utf-8">
-    var pictureSource;  
-    var destinationType;
-    document.addEventListener("deviceready",onDeviceReady,false);
-    function onDeviceReady() {
-        pictureSource=navigator.camera.PictureSourceType;
-        destinationType=navigator.camera.DestinationType;
-    }
-    function onPhotoDataSuccess(imageData) {
-      var smallImage = document.getElementById('smallImage');
-      smallImage.style.display = 'block';
-      smallImage.src = "data:image/jpeg;base64," + imageData;
-    }
-    function onPhotoURISuccess(imageURI) {
-      var largeImage = document.getElementById('largeImage');
-      largeImage.style.display = 'block';
-      largeImage.src = imageURI;
-    }
-    function capturePhoto() {
-      navigator.camera.getPicture(onPhotoDataSuccess, onFail, { quality: 50,
-        correctOrientation : true,
-        destinationType: destinationType.DATA_URL });
-    }
-    function capturePhotoEdit() {
-       navigator.camera.getPicture(onPhotoDataSuccess, onFail, { quality: 20, 
-        allowEdit: true, //android에서는 특별한 효과 없음, 무시됨
-        correctOrientation : true,
-        destinationType: destinationType.DATA_URL });
-    }
-    function getPhoto(source) {
-      navigator.camera.getPicture(onPhotoURISuccess, onFail, { quality: 50,
-        correctOrientation : true, 
-        destinationType: destinationType.FILE_URI,
-        sourceType: source });
-    }
-    function onFail(message) {
-      alert('Failed because: ' + message);
-    }
-    <!--여기까지-->
+    <form action="indexcopy.html" method="get">
+        <input type="submit" value="move">
+    </form>
     <hr>
      <!--코드 추가-->
             <div data-role="button" class="btn1">Take Pic</div>
